@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] players;
+    public string sceneNameToLoad;
 
     public void CheckWinState()
     {
@@ -25,6 +26,6 @@ public class GameManager : MonoBehaviour
 
     private void NewRound()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(sceneNameToLoad);
     }
 }
